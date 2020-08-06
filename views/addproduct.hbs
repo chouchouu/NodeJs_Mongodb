@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PEACEMINUSONE</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+     <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+     <!-- jQuery library -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ 
+     <!-- Popper JS -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ 
+     <!-- Latest compiled JavaScript -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+     <link rel="stylesheet" href="css/shop.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!--menu doc ngang-->
+            <div class="col-sm-2 " style="background-color: black; height: 800px;" >
+                <div class="container" >
+                    <!-- justify-content-center giua-->
+                    <nav class="navbar navbar-expand-sm" style="position: fixed;" >
+                    <ul class="nav flex-column nav nav-tabs ">
+                    <div style="margin-left:0px">
+                        <img src="/img/peaceminusone.jpg" alt="" height="60px" width="180px">
+                    </div>
+                    <hr>
+                    <li class="nav-item">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-danger" style="width:150px"><i class="far fa-user"></i> &nbsp&nbsp Admin</button>
+                            <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                    <form action='/home' method="POST">
+                                        <button  style="font-size:15px;width: 180px;background-color: rgb(100, 5, 5);color: white;border: none ">Dashboard
+                                    </button>
+                                    </form>
+                                    <div class="dropdown-divider"></div>
+                                    <form action='/forgotpass' method="POST">
+                                        <button  style="font-size:15px;width: 180px;background-color: rgb(255, 255, 255);color: rgb(0, 0, 0);border: none ">Change Password
+                                    </button>
+                                    </form>
+                          </div>
+                        </li>
+                        <br>
+                         
+                            <li class="nav-item">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-danger" style="width:150px"><i class="	fas fa-music"></i>&nbsp&nbsp Product</button>
+                                    <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      <span class="sr-only">Toggle Dropdown</span>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <form action='/shop' method="POST">
+                                                <button  style="font-size:15px;width: 180px;background-color: rgb(100, 5, 5);color: white;border: none ">Product
+                                            </button>
+                                            </form>
+                                     
+                                      <div class="dropdown-divider"></div>
+                                      <form action='/add' method="POST">
+                                        <button style="font-size:15px;text-align: center;width: 180px;background-color: rgb(255, 255, 255);color: rgb(0, 0, 0);border: none">Add Product
+                                    </button>
+                                    </form>
+                                    </div>
+                                  </div>
+                                </li>
+                                <br>
+                                <li class="nav-item">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-danger" style="width:150px"><i class="far fa-user"></i> ProductType</button>
+                                        <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                          <span class="sr-only">Toggle Dropdown</span>
+                                        </button>
+                                        <div class="dropdown-menu">
+                                                <form action='/type' method="POST">
+                                                    <button  style="font-size:15px;width: 180px;background-color: rgb(100, 5, 5);color: white;border: none ">Type
+                                                </button>
+                                                </form>
+                                         
+                                          <div class="dropdown-divider"></div>
+                                          <form action='/addtype' method="POST">
+                                            <button  style="font-size:15px;width: 180px;background-color: rgb(255, 255, 255);color: rgb(0, 0, 0);border: none ">Add Type
+                                        </button>
+                                        </form>
+                                      </div>
+                                    </li>
+                                 <!-- <i class="fas fa-grip-horizontal"></i>
+                                <i class="fab fa-rocketchat"></i>-->
+                    <br>
+                    <form action='/signin' method="POST">
+                            <button style="font-size:15px;height: 40px;width: 180px;background-color: rgb(100, 5, 5);color: white;border: none "><i class="	fas fa-external-link-alt"></i>Logout
+                        </button>
+                        </form>
+                </ul>
+                </nav>
+                           
+                </div>
+            </div>
+            <!--menu tren-->
+            <div class="col-sm-10">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top ; background-size:'cover'" >
+                    <img src="/img/peac.jpg" alt="" width="60px" height="60px" style="border-top-right-radius:80px;border-top-left-radius:80px;border-bottom-left-radius: 80px;border-bottom-right-radius: 80px">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>     
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                            <a class="nav-link" href="#" style="margin-left:20px">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-user"></i> <span class="sr-only">(current)</span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <form action='/forgotpass' method="POST">
+                                <button  style="font-size:15px;width: 180px;background-color: rgb(255, 255, 255);color: rgb(0, 0, 0);border: none;margin-left: -10px">Change Password
+                            </button>
+                            </form>
+                            <div class="dropdown-divider"></div>
+                           <form action='/signin' method="POST">
+                            <button style="font-size:15px;width: 180px;background-color: rgb(255, 255, 255);color: rgb(0, 0, 0);border: none;margin-left: -10px ">Logout
+                            </button>
+                            </form>
+                            </div>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="#"> <i class="fas fa-bell"></i> </a>
+                            </li>
+                        </ul>
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" style="background:brown;border-color:brown;color: white" type="submit">Search</button>
+                        </form>
+                    </div>
+                </nav>
+                <hr>
+                <br>
+               <!--Add sản phẩm-->
+               <div class="border border-secondary"style="margin-left:0px ;width: 1230px;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;
+               border-top-left-radius: 5px;border-top-right-radius: 5px;border:rgb(92, 91, 90)">
+                <H2 style="text-align: center">ADD PRODUCT</H2>
+                <br>
+         
+                <form >
+                    
+                        <div class="row"style="margin-right:20px">
+                          <div class="col" style="margin-left:20px">
+                            <input type="text" class="form-control" placeholder="Name product" name="Name">
+                          </div>
+                          <div class="col" style="margin-left:20px">
+                            <input type="text" class="form-control" placeholder="Price" name="Price">
+                          </div>
+                        </div>
+                        <br>
+                        <div class="form-group"style="margin-left:20px;margin-right:30px" >
+                                <textarea class="form-control" rows="5" id="comment" placeholder="Describe"></textarea>
+                            </div> <br>
+                            <div class="form-group"style="margin-left:20px;margin-right:30px" >
+                                    <input type="file" class="form-control-file border" name="file">
+                                  </div>
+                                  <button style="background:brown;margin-left:20px" type="submit" class="btn btn-primary">Add Product</button>
+                                 
+                                </form>
+                                <br>
+                            </div>
+                                 <!--gri-->
+            
+            </div>
+        </div>
+  
+          
+    </div>
+</body>
+</html>
+<!--
+let buys = await Buys.find({}).populate({
+            path: "tentype",
+            select:"tentype && matype"
+        });
+        return res.status(200).json({ status: true, data: buys });
+-->

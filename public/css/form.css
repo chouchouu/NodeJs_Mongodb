@@ -1,0 +1,31 @@
+body{
+    background: url(../img/banner1.jpg)no-repeat;
+    background-size: cover;
+}
+h1{
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+    color: #fff;
+    font-size: 70px;
+}
+.form-group{
+    margin-top: 30px;
+}
+.form-group  input[type="email"]{
+    background: url(../img/m.png)no-repeat 0px 5px;
+    outline: none;
+    color: #fff;
+    padding: 12px 13px 20px 44px;
+     margin: 0 0 20px;
+}
+.form-group input[type="password"]{
+    background: url(../img/l.png)no-repeat 0px 5px;
+    outline: none;
+    color: #fff;
+    padding: 12px 13px 20px 44px;
+     margin: 0 0 20px;
+}
+.btn{
+    background-color: rgb(153, 8, 8);
+    width: 100%;
+}

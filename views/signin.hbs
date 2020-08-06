@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/form.css">
+   <!-- <link rel="stylesheet" href="../public/css/form.css">-->
+</head>
+<body>
+    <div class="container">
+        <div class="row" >
+            <div class="col-3"></div>
+            <div class="col-6" style="margin-top:150px">
+                    <h1>Login</h1>
+                <form action='/' method="POST">
+                    <div class="form-group">
+                   <!--<label for="email">Email address:</label>-->
+                    <input type="email" class="form-control" placeholder="Email" id="email" name="email">
+                    </div>
+                    <div class="form-group">
+                  <!--  <label for="pwd">Password:</label>-->
+                    <input type="password" class="form-control" placeholder="Password" id="password" name="password">
+                    </div>
+                    
+                    <div class="form-group form-check">
+                    <label class="form-check-label" style="color:#fff; margin-right: 320px">
+                        <input class="form-check-input" type="checkbox" > Remember me
+                    </label>
+
+                    </div>
+                  
+                    <button style="width:545px;height: 40px; background-color: brown;border-color: white;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;border-top-left-radius: 5px;border-top-right-radius:5px">
+                    Submit</button> 
+                </form>
+                <br>
+                <form action='/register' method="POST">
+                    <button style="font-size:15px; background:url(../img/banner1.jpg);width: 5px;border: none;color: #fff">
+             CreateAccount
+                </button>
+                </form>
+                <form action='/forgotpass' method="POST" style="margin-top:-20px;margin-left: 430px;">
+                    <button style="font-size:15px; background:url(../img/banner1.jpg);width: 5px;border: none;color: #fff" >
+                        ForgotPassword
+                    </button>
+                </form>
+    
+             
+            </div>
+            <div class="col-3">
+            </div>
+        </div>
+      
+    </div>
+
+</body>

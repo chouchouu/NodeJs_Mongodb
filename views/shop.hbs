@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PEACEMINUSONE</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+     <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+
+     <!-- jQuery library -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ 
+     <!-- Popper JS -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ 
+     <!-- Latest compiled JavaScript -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+     <link rel="stylesheet" href="css/shop.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!--menu doc ngang-->
+            <div class="col-sm-2 " style="background-color: black; height: 1600px;" >
+                <div class="container" >
+                <!-- justify-content-center giua-->
+                <nav class="navbar navbar-expand-sm" style="position: fixed;" >
+                <ul class="nav flex-column nav nav-tabs ">
+                <div style="margin-left:0px">
+                <img src="/img/peaceminusone.jpg" alt="" height="60px" width="180px">
+                </div>
+                <hr>
+                    <li class="nav-item">
+                    <div class="btn-group">
+                    <button type="button" class="btn btn-danger" style="width:150px"><i class="far fa-user"></i> &nbsp&nbsp Admin</button>
+                    <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <div class="dropdown-menu">
+                    <form action='/home' method="POST">
+                        <button  style="font-size:15px;width: 180px;background-color: rgb(100, 5, 5);color: white;border: none ">Dashboard
+                    </button>
+                    </form>
+                    <div class="dropdown-divider"></div>
+                    <form action='/forgotpass' method="POST">
+                        <button  style="font-size:15px;width: 180px;background-color: rgb(255, 255, 255);color: rgb(0, 0, 0);border: none ">Change Password
+                    </button>
+                    </form>
+                    </div>
+                    </div>
+                        </li>
+                        <br>
+                        <li class="nav-item">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-danger" style="width:150px"><i class="	fas fa-music"></i>&nbsp&nbsp Product</button>
+                        <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <form action='/shop' method="POST">
+                            <button  style="font-size:15px;width: 180px;background-color: rgb(100, 5, 5);color: white;border: none ">Product</button>
+                        </form>
+                    <div class="dropdown-divider"></div>
+                    <form action='/add' method="POST">
+                    <button style="font-size:15px;text-align: center;width: 180px;background-color: rgb(255, 255, 255);color: rgb(0, 0, 0);border: none">Add Product
+                </button>
+                </form>
+                    </div>
+                    </div>
+                </li>
+                <br>
+                <li class="nav-item">
+                <div class="btn-group">
+                <button type="button" class="btn btn-danger" style="width:150px"><i class="far fa-user"></i> ProductType</button>
+                <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <div class="dropdown-menu">
+                <form action='/type' method="POST">
+                    <button  style="font-size:15px;width: 180px;background-color: rgb(100, 5, 5);color: white;border: none ">Type
+                </button>
+                </form>
+                <div class="dropdown-divider"></div>
+                <form action='/addtype' method="POST">
+                <button  style="font-size:15px;width: 180px;background-color: rgb(255, 255, 255);color: rgb(0, 0, 0);border: none ">Add Type
+            </button>
+            </form>
+            </div>
+        </li>
+        <!-- <i class="fas fa-grip-horizontal"></i>
+        <i class="fab fa-rocketchat"></i>-->
+        <br>
+            <form action='/signout' method="GET">
+            <button style="font-size:15px;height: 40px;width: 180px;background-color: rgb(100, 5, 5);color: white;border: none "><i class="	fas fa-external-link-alt"></i>Logout
+            </button>
+            </form>
+                   
+                           
+            </ul>
+            </nav>
+                        
+            </div>
+            </div>
+            <!--menu tren-->
+            <div class="col-sm-10">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top ; background-size:'cover'" >
+                  
+                  
+                    <img src="/img/peac.jpg" alt="" width="65px" height="60px" style="border-top-right-radius:80px;border-top-left-radius:80px;border-bottom-left-radius: 80px;border-bottom-right-radius: 80px">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>     
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                    <a class="nav-link" href="#"style="margin-left:20px">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-user"></i> <span class="sr-only">(current)</span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <form action='/forgotpass' method="POST">
+                        <button  style="font-size:15px;width: 180px;background-color: rgb(255, 255, 255);color: rgb(0, 0, 0);border: none;margin-left: -10px ">Change Password
+                    </button>
+                    </form>
+                    <div class="dropdown-divider"></div>
+                        <form action='/signout' method="GET">
+                    <button style="font-size:15px;width: 180px;background-color: rgb(255, 255, 255);color: rgb(0, 0, 0);border: none;margin-left: -10px ">Logout
+                    </button>
+                    </form>
+                    </div>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#"> <i class="fas fa-bell"></i> </a>
+                    </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" style="background:brown;border-color:brown;color: white" type="submit">Search</button>
+                    </form>
+                    </div>
+                </nav>
+                <hr>
+                <br>
+                <!--Model-->
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" style="background-color:rgb(255, 255, 255);color:brown;size:40px
+                  margin-left:-50px;width:150px;height:40px;border-top-right-radius:80px;border-top-left-radius:80px;border-bottom-left-radius: 80px;border-bottom-right-radius: 80px">ADD PRODUCT</button>
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header" style="background-color: rgb(110, 4, 4);">
+                        <h5 class="modal-title" id="exampleModalLabel" style=" color:#ffff">Add Products</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form name="fMenuDetail" action='/upload' method="POST" enctype="multipart/form-data">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Product name :</label>
+                            <input type="text" class="form-control" name="name">
+                            <div style="color:rgb(184, 0, 0); size:10px" id="errName"></div>
+                        </div>
+                        <div class="form-group">
+                            <label>Categorize:</label>
+                            <select class="form-control" name="tentype" id="tentype">
+                            {{#each typed}}
+                            <option value="{{_id}}">{{loaitype}}</option>
+                            {{/each}}
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Product price:</label>
+                             <input type="text" class="form-control" name="price">
+                             <div style="color:rgb(184, 0, 0); size:10px" id="errPrice"></div>
+                        </div>
+                             <div class="form-group">
+                            <label>More:</label>
+                            <textarea class="form-control" name="describe"></textarea>
+                            <div style="color:rgb(184, 0, 0); size:10px" id="errDescribe"></div>
+                        </div>
+                        <div>
+                         <label>Image:</label>
+                             <input type="file"  name="image" style="width:100%">
+                        </div>
+                    
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" onclick="fSubmit()" class="btn btn-primary" style="background-color: brown;border:none">Up</button>
+                    </div>
+                     </form>
+                    </div>
+                </div>
+                </div>
+                  <!---->
+
+
+                
+                  <br>
+                  <br>
+       
+                <div class="row">
+       <div style="width:100%; height:100%; margin-left:20px;margin-right:20px" >
+        <table id="example" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Categorize</th>
+                <th>Price</th>
+                <th>Describe</th>
+                <th></th>
+                        
+            </tr>
+        </thead>
+        <tbody>
+            {{# each list}}
+            <tr style="background:white">
+                <td style="width:50px">
+                <image src = "http://localhost:8000/{{image}}" class="data" style="width:100px;height:100px" />
+                </td>
+                <td>
+                    <p class="data">{{name}}</p>
+                </td>
+                 <td>
+                    <p class="data">{{tentype.loaitype}}</p>
+                   
+                </td>
+                
+                <td>
+                     <p class="data">{{price}}</p>
+                </td>
+                <td>
+                     <p class="data">{{describe}}</p>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" data-pd_id="{{_id}}" data-pd_tl="{{tentype.loaitype}}" 
+                    data-pd_code="{{describe}}" data-pd_name="{{name}}" data-pd_price="{{price}}" data-pd_img="{{image}}" class="edit" data-toggle="modal" data-target=".bd-example-modal-lg">Edit|</a>
+      
+                <a style="color:brown" href="/delete/{{_id}}" class="btnDelete" onclick="return confirm('Are you sure you want to delete')">Delete</a></td>
+            </tr>
+            {{/each}}
+        </tbody>
+      
+        </table>
+        </div>
+        </div>  
+        </div>
+        </div>
+
+    </div>
+    <!--Model sua thong tin-->
+        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+        <div class="modal-header" style="background-color: rgb(110, 4, 4);">
+        <h5 class="modal-title" id="exampleModalLabel" style=" color:#ffff">Edit Products</h5>
+        <div class="modal-content">
+        <form  action='/edit' method="POST" autocomplete="off">
+          <div class="form-group">
+             <input class="id" type="hidden" name="_id">
+             <br>
+                        <div class="form-group">
+                        <label style="margin-left: 30px;">Product name :</label>
+                        <input type="text" class="form-control name_" name="name" style="margin-left: 30px; width:600px">
+                        <div style="color:rgb(184, 0, 0); size:10px"></div>
+                        </div>
+                         
+                        <div class="form-group">
+                        <label style="margin-left: 30px;">Categorize:</label>
+                        <select class="form-control pd-tl_" id="brandedt" name="tentype" style="margin-left: 30px; width:600px">
+                       {{#each typed}}
+                        <option value="{{_id}}" style="margin-left: 20px;margin-right: 20px">{{loaitype}}</option>
+                        {{/each}}
+                        </select>
+                        </div>
+
+                        <div class="form-group">
+                        <label style="margin-left: 30px;">Product price:</label>
+                        <input type="text" class="form-control price_" name="price" style="margin-left: 30px; width:600px">
+                        <div style="color:rgb(184, 0, 0); size:10px" ></div>
+                        </div>
+                        <div class="form-group">
+                        <label style="margin-left: 30px;">More:</label>
+                        <textarea class="form-control code_" name="describe" style="margin-left: 30px; width:600px"></textarea>
+                        <div style="color:rgb(184, 0, 0); size:10px"></div>
+                        </div>
+                           <!--<img name = "image" class="form-control pd_img" style="width:100px;height:100px" />      -->                
+                         <div>
+                         <label style="margin-left: 30px;">Image:</label>
+                        <input type="file" class="form-control img" name="image" style="width:100%;margin-left: 30px; width:600px">
+                        </div>
+              
+                      
+                     
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="submit" class="btn btn-primary" style="background-color: brown;border:none">Up</button>
+            </div>
+                </form>
+            </div>
+        </div>
+        </div>
+     <!---->
+
+        <!--datatables-->
+        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+        <!--bat loi khong duoc de trong thong tin-->
+
+</body>
+</html>
+    <script>
+
+        function fSubmit() {
+            var vName = fMenuDetail.name.value;
+            if (vName.trim() ==""){
+                $("#errName").text("* khong duoc de trong thong tin *");
+                fMenuDetail.name.focus();
+                return;
+                
+            }
+            $("#errName").text();
+            //gia
+             var vName = fMenuDetail.price.value;
+            if (vName.trim() ==""){
+                $("#errPrice").text("* khong duoc de trong thong tin *");
+                fMenuDetail.price.focus();
+                return;
+                
+            }
+            $("#errPrice").text();
+            //mota
+            var vName = fMenuDetail.describe.value;
+            if (vName.trim() ==""){
+                $("#errDescribe").text("* khong duoc de trong thong tin *");
+                fMenuDetail.describe.focus();
+                return;
+                
+            }
+            $("#errPrice").text();
+            fMenuDetail.submit();
+        }
+        </script>
+        <script type="text/javascript">
+        $(document).ready(function () {
+        $('#example').DataTable();
+
+        $('#example').on('click', '.edit', function () {
+
+
+            var id = $(this).data('pd_id');
+            var tenloaisanpham = $(this).data('pd_tl');
+            var motasanpham = $(this).data('pd_code');
+            var tensanpham = $(this).data('pd_name');
+            var giasanpham = $(this).data('pd_price');
+            var hinhsanpham =$(this).data('pd_img');
+
+           // alert("data" + id + "  " + tenloaisanpham + "  " + motasanpham + "  " + tensanpham + "  " + giasanpham);
+            $('.id').val(id);
+            $('.pd-tl_').val(tenloaisanpham);
+            $('.code_').val(motasanpham);
+            $('.name_').val(tensanpham);
+            $('.price_').val(giasanpham);
+            $('img').val(hinhsanpham);
+
+             if ($('#brandedt option:selected').length > 0) {
+                $('#brandedt option:selected').removeAttr("selected");
+            }
+            $("#brandedt option:contains(" + tenloaisanpham +
+                ")").attr('selected', 'selected');
+
+            $("#brandedt option:contains(" + tenloaisanpham +
+                ")").prop('selected', true); 
+
+
+
+        })
+    });
+
+
+</script>
